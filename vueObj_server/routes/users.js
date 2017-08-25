@@ -1,0 +1,11 @@
+var express=require("express");
+var route=express.Router();
+var userControll=require("../controlls/user.controll.js");
+route.post("/add",userControll.create);
+route.get("/all",userControll.searchAll);
+route.put("/change/:id",userControll.change);
+route.delete("/delete/:id",userControll.delete);
+route.post("/removes",userControll.removes);
+route.post("/list",userControll.list);
+route.post("/login",userControll.login);
+module.exports=route;
